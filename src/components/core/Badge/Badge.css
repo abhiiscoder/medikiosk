@@ -1,0 +1,95 @@
+/**
+ * Badge Styles
+ */
+
+.mk-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 2px 8px;
+  font-size: var(--font-size-caption);
+  font-weight: var(--font-weight-medium);
+  border-radius: var(--radius-sm);
+  border: var(--border-width-hairline) solid transparent;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+.mk-badge--pill {
+  border-radius: var(--radius-full);
+}
+
+/* Status variants */
+.mk-badge--default {
+  background-color: var(--color-bg-surface-muted);
+  color: var(--color-text-secondary);
+  border-color: var(--color-border-default);
+}
+
+.mk-badge--brand {
+  background-color: var(--color-brand-subtle);
+  color: var(--color-brand-primary);
+  border-color: var(--color-brand-border);
+}
+
+.mk-badge--success {
+  background-color: var(--color-status-success-subtle);
+  color: var(--color-status-success-text);
+  border-color: var(--color-status-success-border);
+}
+
+.mk-badge--warning {
+  background-color: var(--color-status-warning-subtle);
+  color: var(--color-status-warning-text);
+  border-color: var(--color-status-warning-border);
+}
+
+.mk-badge--error {
+  background-color: var(--color-status-error-subtle);
+  color: var(--color-status-error-text);
+  border-color: var(--color-status-error-border);
+}
+
+.mk-badge--info {
+  background-color: var(--color-status-info-subtle);
+  color: var(--color-status-info-text);
+  border-color: var(--color-status-info-border);
+}
+
+/* Provenance variants */
+.mk-badge--provenance-user {
+  background-color: var(--provenance-user-bg);
+  color: var(--provenance-user-text);
+  border-color: var(--provenance-user-border);
+}
+
+.mk-badge--provenance-ai {
+  background-color: var(--provenance-ai-bg);
+  color: var(--provenance-ai-text);
+  border-color: var(--provenance-ai-border);
+}
+
+.mk-badge--provenance-doc {
+  background-color: var(--provenance-doc-bg);
+  color: var(--provenance-doc-text);
+  border-color: var(--provenance-doc-border);
+}
+
+.mk-badge--provenance-verified {
+  background-color: var(--provenance-verified-bg);
+  color: var(--provenance-verified-text);
+  border-color: var(--provenance-verified-border);
+}
+
+.mk-badge--provenance-sys {
+  background-color: var(--provenance-sys-bg);
+  color: var(--provenance-sys-text);
+  border-color: var(--provenance-sys-border);
+}
+
+.mk-badge__dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: currentColor;
+}

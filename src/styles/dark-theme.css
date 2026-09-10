@@ -1,0 +1,42 @@
+/**
+ * MEDiKIOSK — PHASE 01
+ * Dark Clinical-AI Theme Tokens (Derived from Visual Reference)
+ */
+
+:root {
+  /* Surface Layers */
+  --theme-bg-app: #060A13;
+  --theme-bg-workspace: #060A13;
+  --theme-bg-sidebar: #080C17;
+  --theme-bg-sidebar-hover: #0E1626;
+  --theme-bg-nav-active: #0F1E38;
+  --theme-bg-control: #0D1626;
+  --theme-bg-control-hover: #131F36;
+
+  /* Accent & Brand Colors */
+  --theme-brand-blue: #1865F2;
+  --theme-brand-blue-hover: #2574FC;
+  --theme-brand-blue-active: #1354C8;
+  --theme-brand-blue-glow: rgba(24, 101, 242, 0.18);
+  --theme-brand-cyan: #38BDF8;
+
+  /* Typography Colors */
+  --theme-text-primary: #FFFFFF;
+  --theme-text-secondary: #D2D9E2;
+  --theme-text-muted: #717D8A;
+  --theme-text-dim: #4A5565;
+
+  /* Dividers & Borders */
+  --theme-border-subtle: #111B2C;
+  --theme-border-medium: #16243A;
+  --theme-border-focus: #1D68FE;
+
+  /* Status Colors in Dark Context */
+  --theme-status-online: #22C55E;
+  --theme-status-online-glow: rgba(34, 197, 94, 0.4);
+
+  /* Geometry */
+  --sidebar-desktop-width: 310px;
+  --sidebar-collapsed-width: 68px;
+  --header-desktop-height: 64px;
+}

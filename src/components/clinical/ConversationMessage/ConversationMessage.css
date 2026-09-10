@@ -1,0 +1,117 @@
+/**
+ * ConversationMessage Styles
+ */
+
+.mk-message-row {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: var(--space-4);
+  width: 100%;
+}
+
+.mk-message-row--user {
+  align-items: flex-end;
+}
+
+.mk-message-row--assistant {
+  align-items: flex-start;
+}
+
+.mk-message-row--system {
+  align-items: center;
+}
+
+.mk-message-bubble {
+  max-width: 82%;
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--radius-lg);
+  font-size: var(--font-size-body);
+  line-height: var(--line-height-normal);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  border: var(--border-width-hairline) solid transparent;
+}
+
+/* User Message */
+.mk-message-row--user .mk-message-bubble {
+  background-color: var(--provenance-user-bg);
+  border-color: var(--provenance-user-border);
+  color: var(--color-text-primary);
+  border-bottom-right-radius: var(--radius-sm);
+}
+
+/* Assistant Message */
+.mk-message-row--assistant .mk-message-bubble {
+  background-color: var(--color-bg-surface);
+  border-color: var(--color-border-default);
+  color: var(--color-text-primary);
+  border-bottom-left-radius: var(--radius-sm);
+  box-shadow: var(--shadow-low);
+}
+
+/* System Message */
+.mk-message-row--system .mk-message-bubble {
+  background-color: var(--provenance-sys-bg);
+  border-color: var(--provenance-sys-border);
+  color: var(--color-text-muted);
+  font-size: var(--font-size-metadata);
+  max-width: 90%;
+  text-align: center;
+  border-radius: var(--radius-md);
+}
+
+/* Metadata bar (Provenance & Time) */
+.mk-message-meta {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--font-size-metadata);
+  color: var(--color-text-muted);
+  margin-bottom: 2px;
+}
+
+/* Waveform preview */
+.mk-message-audio {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: 4px 8px;
+  background-color: var(--color-bg-surface-muted);
+  border-radius: var(--radius-md);
+  margin-top: 4px;
+}
+
+.mk-waveform-bars {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  height: 18px;
+}
+
+.mk-waveform-bar {
+  width: 3px;
+  background-color: var(--color-brand-primary);
+  border-radius: 1px;
+}
+
+/* Extracted findings pill tray inside message */
+.mk-message-findings {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-top: var(--space-1);
+  padding-top: var(--space-2);
+  border-top: var(--border-width-hairline) dashed var(--color-border-subtle);
+}
+
+/* Processing indicator */
+.mk-ai-stage-indicator {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--font-size-body-small);
+  font-weight: var(--font-weight-medium);
+  color: #6D28D9;
+}

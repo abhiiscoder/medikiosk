@@ -1,0 +1,464 @@
+/**
+ * MEDiKIOSK — Special ID Authentication Modal Styles
+ * Matches Reference 02, 03, 04, 05 dark glassmorphism
+ */
+
+.mk-auth-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(4, 7, 13, 0.78);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  z-index: 100;
+  animation: mk-auth-fade-in 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes mk-auth-fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Centered Authentication Card */
+.mk-auth-card {
+  width: 100%;
+  max-width: 460px;
+  background-color: rgba(12, 17, 26, 0.96);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(40, 60, 92, 0.85);
+  border-radius: 22px;
+  padding: 34px 36px 32px 36px;
+  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.8), 0 0 32px rgba(24, 101, 242, 0.14);
+  position: relative;
+  overflow: hidden;
+  user-select: none;
+  animation: mk-card-scale-in 0.24s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes mk-card-scale-in {
+  from {
+    opacity: 0;
+    transform: scale(0.96) translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+/* Card Close Button */
+.mk-auth-card__close {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  background: transparent;
+  border: none;
+  color: #64748B;
+  cursor: pointer;
+  padding: 6px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-fast);
+}
+
+.mk-auth-card__close:hover {
+  color: #FFFFFF;
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+/* Card Branding Header */
+.mk-auth-card__brand {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 22px;
+}
+
+.mk-auth-card__logo-icon {
+  width: 38px;
+  height: 38px;
+  margin-bottom: 8px;
+  filter: drop-shadow(0 0 12px rgba(24, 101, 242, 0.45));
+}
+
+.mk-auth-card__wordmark {
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: #FFFFFF;
+}
+
+.mk-auth-card__wordmark .brand-accent {
+  color: var(--theme-brand-blue);
+}
+
+.mk-auth-card__subtitle {
+  font-size: 12px;
+  font-weight: 500;
+  color: #718298;
+  letter-spacing: -0.01em;
+  margin-top: 3px;
+}
+
+/* Titles */
+.mk-auth-card__title {
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: #FFFFFF;
+  text-align: center;
+  margin: 0 0 6px 0;
+}
+
+.mk-auth-card__desc {
+  font-size: 13.5px;
+  color: #8E9FB4;
+  text-align: center;
+  margin: 0 0 22px 0;
+  line-height: 1.4;
+}
+
+/* Labels */
+.mk-auth-label {
+  display: block;
+  font-size: 12.5px;
+  font-weight: 500;
+  color: #CBD5E1;
+  margin-bottom: 8px;
+  letter-spacing: -0.01em;
+}
+
+/* Input Wrapper */
+.mk-auth-input-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 14px;
+}
+
+.mk-auth-input-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  height: 48px;
+  padding: 0 16px;
+  background-color: rgba(18, 25, 38, 0.88);
+  border: 1px solid rgba(42, 62, 92, 0.8);
+  border-radius: 10px;
+  transition: all var(--transition-fast);
+}
+
+.mk-auth-input-wrapper:focus-within {
+  border-color: #38BDF8;
+  background-color: rgba(22, 32, 50, 0.95);
+  box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.18);
+}
+
+.mk-auth-input-icon {
+  color: #64748B;
+  flex-shrink: 0;
+}
+
+.mk-auth-input-wrapper:focus-within .mk-auth-input-icon {
+  color: #38BDF8;
+}
+
+.mk-auth-input {
+  width: 100%;
+  height: 100%;
+  border: none;
+  background: transparent;
+  outline: none;
+  color: #FFFFFF;
+  font-family: var(--font-family-sans);
+  font-size: 14.5px;
+  font-weight: 400;
+}
+
+.mk-auth-input::placeholder {
+  color: #556982;
+}
+
+/* Forgot ID link row */
+.mk-auth-link-row {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: -4px;
+  margin-bottom: 20px;
+}
+
+.mk-auth-link {
+  background: transparent;
+  border: none;
+  color: #38BDF8;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 2px 4px;
+  transition: color var(--transition-fast);
+}
+
+.mk-auth-link:hover {
+  color: #7DD3FC;
+  text-decoration: underline;
+}
+
+/* Buttons */
+.mk-auth-btn {
+  width: 100%;
+  height: 46px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-family: var(--font-family-sans);
+  font-size: 14.5px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  text-decoration: none;
+  border: none;
+}
+
+.mk-auth-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Primary Button (Dark pill with subtle highlight & arrow) */
+.mk-auth-btn--primary {
+  background-color: rgba(22, 31, 46, 0.95);
+  border: 1px solid rgba(56, 82, 120, 0.85);
+  color: #FFFFFF;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+}
+
+.mk-auth-btn--primary:hover:not(:disabled) {
+  background-color: rgba(30, 44, 68, 0.98);
+  border-color: #38BDF8;
+  box-shadow: 0 6px 20px rgba(24, 101, 242, 0.25);
+  transform: translateY(-1px);
+}
+
+.mk-auth-btn--primary:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+/* Secondary Button (OR create new) */
+.mk-auth-btn--secondary {
+  background-color: transparent;
+  border: 1px solid rgba(45, 65, 95, 0.7);
+  color: #E2E8F0;
+}
+
+.mk-auth-btn--secondary:hover:not(:disabled) {
+  background-color: rgba(255, 255, 255, 0.06);
+  border-color: rgba(70, 100, 140, 0.9);
+  color: #FFFFFF;
+}
+
+/* Divider OR */
+.mk-auth-divider {
+  display: flex;
+  align-items: center;
+  margin: 18px 0;
+  gap: 12px;
+}
+
+.mk-auth-divider::before,
+.mk-auth-divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background-color: rgba(35, 52, 78, 0.8);
+}
+
+.mk-auth-divider span {
+  font-size: 11.5px;
+  font-weight: 600;
+  color: #64748B;
+  letter-spacing: 0.04em;
+}
+
+/* Back Link (← Back to sign in) */
+.mk-auth-back-row {
+  display: flex;
+  justify-content: center;
+  margin-top: 18px;
+}
+
+.mk-auth-back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  border: none;
+  color: #38BDF8;
+  font-size: 13.5px;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 4px 8px;
+  transition: color var(--transition-fast);
+}
+
+.mk-auth-back-link:hover {
+  color: #7DD3FC;
+  text-decoration: underline;
+}
+
+/* Inline Error Message */
+.mk-auth-error-msg {
+  background-color: rgba(239, 68, 68, 0.12);
+  border: 1px solid rgba(239, 68, 68, 0.35);
+  border-radius: 8px;
+  padding: 8px 12px;
+  color: #FCA5A5;
+  font-size: 13px;
+  margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  animation: mk-auth-fade-in 0.2s ease-out;
+}
+
+/* -------------------------------------------------------------
+   ID GENERATED CONTAINER (Reference 05)
+   ------------------------------------------------------------- */
+.mk-auth-id-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgba(18, 25, 38, 0.95);
+  border: 1px solid rgba(45, 68, 102, 0.85);
+  border-radius: 10px;
+  padding: 12px 16px;
+  margin-bottom: 14px;
+}
+
+.mk-auth-id-value {
+  font-family: var(--font-family-mono, monospace);
+  font-size: 17px;
+  font-weight: 700;
+  color: #FFFFFF;
+  letter-spacing: 0.04em;
+}
+
+.mk-auth-copy-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: transparent;
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  color: #38BDF8;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 12.5px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.mk-auth-copy-btn:hover {
+  background-color: rgba(56, 189, 248, 0.12);
+  border-color: #38BDF8;
+  color: #FFFFFF;
+}
+
+.mk-auth-copy-btn--copied {
+  background-color: rgba(52, 211, 153, 0.15) !important;
+  border-color: #34D399 !important;
+  color: #34D399 !important;
+}
+
+.mk-auth-supporting-text {
+  font-size: 12.5px;
+  color: #7E8FA5;
+  text-align: center;
+  margin: 0 0 20px 0;
+  line-height: 1.4;
+}
+
+/* User Profile Header Popover */
+.mk-user-profile-popover {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 28px;
+  width: 240px;
+  background-color: rgba(14, 20, 32, 0.97);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(42, 62, 92, 0.85);
+  border-radius: 12px;
+  padding: 14px 16px;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.7), 0 0 20px rgba(24, 101, 242, 0.12);
+  z-index: 50;
+  animation: mk-auth-fade-in 0.18s ease-out;
+}
+
+.mk-user-popover__name {
+  font-size: 14.5px;
+  font-weight: 600;
+  color: #FFFFFF;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.mk-user-popover__id {
+  font-size: 12px;
+  font-family: var(--font-family-mono, monospace);
+  color: #38BDF8;
+  margin-top: 2px;
+}
+
+.mk-user-popover__role {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #94A3B8;
+  background-color: rgba(255, 255, 255, 0.06);
+  padding: 2px 6px;
+  border-radius: 4px;
+  margin-top: 8px;
+}
+
+.mk-user-popover__divider {
+  height: 1px;
+  background-color: rgba(35, 52, 78, 0.8);
+  margin: 12px 0;
+  border: none;
+}
+
+.mk-user-popover__logout-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 10px;
+  background: transparent;
+  border: none;
+  border-radius: 6px;
+  color: #F87171;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.mk-user-popover__logout-btn:hover {
+  background-color: rgba(239, 68, 68, 0.12);
+  color: #FCA5A5;
+}

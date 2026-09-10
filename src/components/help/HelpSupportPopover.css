@@ -1,0 +1,409 @@
+/**
+ * MEDiKIOSK — HelpSupportPopover Styles (Reference D)
+ */
+
+.mk-help-popover {
+  position: fixed;
+  bottom: 78px;
+  left: 316px;
+  width: 320px;
+  background-color: rgba(9, 15, 26, 0.98);
+  border: 1px solid rgba(30, 48, 76, 0.85);
+  border-radius: 14px;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.55), 0 0 20px rgba(24, 101, 242, 0.1);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  z-index: 850;
+  animation: mkHelpFadeIn 0.18s cubic-bezier(0.16, 1, 0.3, 1);
+  overflow: visible;
+}
+
+.mk-help-popover--collapsed {
+  left: 74px;
+}
+
+[data-theme='light'] .mk-help-popover {
+  background-color: #FFFFFF;
+  border-color: #CBD5E1;
+  box-shadow: 0 16px 36px rgba(15, 23, 42, 0.15);
+}
+
+@keyframes mkHelpFadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Left pointer notch pointing to sidebar Help & Support item */
+.mk-help-notch {
+  position: absolute;
+  bottom: 24px;
+  left: -7px;
+  width: 14px;
+  height: 14px;
+  background-color: rgba(9, 15, 26, 0.98);
+  border-left: 1px solid rgba(30, 48, 76, 0.85);
+  border-bottom: 1px solid rgba(30, 48, 76, 0.85);
+  transform: rotate(45deg);
+  z-index: 2;
+}
+
+[data-theme='light'] .mk-help-notch {
+  background-color: #FFFFFF;
+  border-left-color: #CBD5E1;
+  border-bottom-color: #CBD5E1;
+}
+
+.mk-help-header,
+.mk-help-detail-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 16px 12px 16px;
+  border-bottom: 1px solid rgba(28, 44, 70, 0.6);
+}
+
+[data-theme='light'] .mk-help-header,
+[data-theme='light'] .mk-help-detail-header {
+  border-bottom-color: #E2E8F0;
+}
+
+.mk-help-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: #FFFFFF;
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+
+[data-theme='light'] .mk-help-title {
+  color: #0F172A;
+}
+
+.mk-help-close-btn,
+.mk-help-back-btn {
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  background: transparent;
+  border: none;
+  color: #8A99AC;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.mk-help-close-btn:hover,
+.mk-help-back-btn:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: #FFFFFF;
+}
+
+[data-theme='light'] .mk-help-close-btn:hover,
+[data-theme='light'] .mk-help-back-btn:hover {
+  background: #F1F5F9;
+  color: #0F172A;
+}
+
+.mk-help-options {
+  padding: 10px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.mk-help-option-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 12px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  color: inherit;
+  cursor: pointer;
+  text-align: left;
+  transition: all 0.15s ease;
+  width: 100%;
+}
+
+.mk-help-option-card:hover {
+  background: rgba(24, 101, 242, 0.08);
+  border-color: rgba(24, 101, 242, 0.25);
+}
+
+[data-theme='light'] .mk-help-option-card {
+  background: #F8FAFC;
+  border-color: #E2E8F0;
+}
+
+[data-theme='light'] .mk-help-option-card:hover {
+  background: #EFF6FF;
+  border-color: #BFDBFE;
+}
+
+.mk-help-option-icon {
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  background-color: rgba(24, 101, 242, 0.12);
+  border: 1px solid rgba(24, 101, 242, 0.25);
+  color: #38BDF8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+[data-theme='light'] .mk-help-option-icon {
+  background-color: #EFF6FF;
+  border-color: #BFDBFE;
+  color: #1865F2;
+}
+
+.mk-help-option-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.mk-help-option-title {
+  font-size: 13.5px;
+  font-weight: 600;
+  color: #FFFFFF;
+  margin: 0 0 2px 0;
+}
+
+[data-theme='light'] .mk-help-option-title {
+  color: #0F172A;
+}
+
+.mk-help-option-desc {
+  font-size: 11.5px;
+  color: #8A99AC;
+  margin: 0;
+  line-height: 1.35;
+}
+
+[data-theme='light'] .mk-help-option-desc {
+  color: #64748B;
+}
+
+.mk-help-chevron {
+  color: #64748B;
+  flex-shrink: 0;
+}
+
+/* Detail View: Contact Support */
+.mk-help-contact-body {
+  padding: 16px;
+}
+
+.mk-help-contact-heading {
+  font-size: 13.5px;
+  font-weight: 600;
+  color: #FFFFFF;
+  margin: 0 0 2px 0;
+}
+
+[data-theme='light'] .mk-help-contact-heading {
+  color: #0F172A;
+}
+
+.mk-help-contact-sub {
+  font-size: 12px;
+  color: #8A99AC;
+  margin: 0 0 14px 0;
+}
+
+[data-theme='light'] .mk-help-contact-sub {
+  color: #64748B;
+}
+
+.mk-help-email-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 12px;
+  border-radius: 8px;
+  background-color: rgba(6, 11, 20, 0.7);
+  border: 1px solid rgba(28, 44, 70, 0.8);
+}
+
+[data-theme='light'] .mk-help-email-card {
+  background-color: #F8FAFC;
+  border-color: #CBD5E1;
+}
+
+.mk-help-email-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+}
+
+.mk-help-mail-icon {
+  color: #38BDF8;
+  flex-shrink: 0;
+}
+
+[data-theme='light'] .mk-help-mail-icon {
+  color: #1865F2;
+}
+
+.mk-help-email-link {
+  font-size: 12px;
+  font-family: var(--font-family-mono, monospace);
+  color: #60A5FA;
+  text-decoration: none;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.mk-help-email-link:hover {
+  text-decoration: underline;
+}
+
+[data-theme='light'] .mk-help-email-link {
+  color: #1865F2;
+}
+
+.mk-help-copy-btn {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 8px;
+  border-radius: 6px;
+  background-color: rgba(24, 101, 242, 0.14);
+  border: 1px solid rgba(24, 101, 242, 0.28);
+  color: #38BDF8;
+  font-size: 11.5px;
+  font-weight: 500;
+  cursor: pointer;
+  flex-shrink: 0;
+  margin-left: 8px;
+  transition: all 0.15s ease;
+}
+
+.mk-help-copy-btn:hover {
+  background-color: rgba(24, 101, 242, 0.25);
+  color: #FFFFFF;
+}
+
+.mk-help-copy-btn--copied {
+  background-color: rgba(34, 197, 94, 0.14) !important;
+  border-color: rgba(34, 197, 94, 0.3) !important;
+  color: #22C55E !important;
+}
+
+[data-theme='light'] .mk-help-copy-btn {
+  background-color: #EFF6FF;
+  border-color: #BFDBFE;
+  color: #1865F2;
+}
+
+/* Detail View: About MEDiKIOSK */
+.mk-help-about-body {
+  padding: 16px;
+}
+
+.mk-help-about-branding {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.mk-help-about-logo {
+  display: flex;
+  gap: 3px;
+}
+
+.mk-about-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.mk-about-dot--blue {
+  background-color: #1865F2;
+}
+
+.mk-about-dot--cyan {
+  background-color: #38BDF8;
+}
+
+.mk-about-dot--soft {
+  background-color: #60A5FA;
+}
+
+.mk-help-brand-name {
+  font-size: 15px;
+  font-weight: 700;
+  color: #FFFFFF;
+  margin: 0;
+  letter-spacing: -0.02em;
+}
+
+[data-theme='light'] .mk-help-brand-name {
+  color: #0F172A;
+}
+
+.mk-help-brand-tagline {
+  font-size: 11px;
+  font-weight: 500;
+  color: #7A899C;
+  margin: 0;
+}
+
+[data-theme='light'] .mk-help-brand-tagline {
+  color: #64748B;
+}
+
+.mk-help-about-desc {
+  font-size: 12px;
+  color: #8A99AC;
+  margin: 0 0 16px 0;
+  line-height: 1.45;
+}
+
+[data-theme='light'] .mk-help-about-desc {
+  color: #475569;
+}
+
+.mk-help-about-footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  border-top: 1px solid rgba(28, 44, 70, 0.6);
+  padding-top: 10px;
+}
+
+[data-theme='light'] .mk-help-about-footer {
+  border-top-color: #E2E8F0;
+}
+
+.mk-help-prototype-badge {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 600;
+  font-family: var(--font-family-mono, monospace);
+  padding: 3px 8px;
+  border-radius: 4px;
+  background-color: rgba(24, 101, 242, 0.12);
+  border: 1px solid rgba(24, 101, 242, 0.25);
+  color: #38BDF8;
+}
+
+[data-theme='light'] .mk-help-prototype-badge {
+  background-color: #EFF6FF;
+  border-color: #BFDBFE;
+  color: #1865F2;
+}

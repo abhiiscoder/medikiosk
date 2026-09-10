@@ -1,0 +1,59 @@
+/**
+ * Tabs Styles
+ */
+
+.mk-tabs {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.mk-tab-list {
+  display: flex;
+  gap: var(--space-2);
+  border-bottom: var(--border-width-hairline) solid var(--color-border-default);
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.mk-tab-list::-webkit-scrollbar {
+  display: none;
+}
+
+.mk-tab-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-3);
+  font-size: var(--font-size-body-small);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-muted);
+  border: none;
+  background: none;
+  border-bottom: 2px solid transparent;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: color var(--transition-fast), border-color var(--transition-fast);
+  margin-bottom: -1px;
+}
+
+.mk-tab-btn:hover {
+  color: var(--color-text-primary);
+}
+
+.mk-tab-btn--active {
+  color: var(--color-brand-primary);
+  border-bottom-color: var(--color-brand-primary);
+  font-weight: var(--font-weight-semibold);
+}
+
+.mk-tab-btn:focus-visible {
+  outline: none;
+  box-shadow: var(--focus-ring-inset);
+  border-radius: var(--radius-sm);
+}
+
+.mk-tab-panel {
+  padding-top: var(--space-4);
+  outline: none;
+}

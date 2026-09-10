@@ -1,0 +1,145 @@
+/**
+ * Checkbox, Radio, and Switch Styles
+ */
+
+/* Checkbox & Radio wrapper */
+.mk-selection-control {
+  display: inline-flex;
+  align-items: flex-start;
+  gap: var(--space-2);
+  cursor: pointer;
+  user-select: none;
+  font-size: var(--font-size-body);
+  color: var(--color-text-secondary);
+}
+
+.mk-selection-control--disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.mk-selection-control input {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* Custom Checkbox Box */
+.mk-checkbox-box {
+  width: 18px;
+  height: 18px;
+  border: var(--border-width-medium) solid var(--color-border-strong);
+  border-radius: var(--radius-sm);
+  background-color: var(--color-bg-surface);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: all var(--transition-fast);
+  margin-top: 2px;
+}
+
+.mk-selection-control:hover:not(.mk-selection-control--disabled) .mk-checkbox-box {
+  border-color: var(--color-brand-primary);
+}
+
+.mk-selection-control input:focus-visible ~ .mk-checkbox-box {
+  box-shadow: var(--focus-ring);
+  border-color: var(--color-border-focus);
+}
+
+.mk-selection-control input:checked ~ .mk-checkbox-box {
+  background-color: var(--color-brand-primary);
+  border-color: var(--color-brand-primary);
+  color: #FFFFFF;
+}
+
+/* Custom Radio Circle */
+.mk-radio-circle {
+  width: 18px;
+  height: 18px;
+  border: var(--border-width-medium) solid var(--color-border-strong);
+  border-radius: 50%;
+  background-color: var(--color-bg-surface);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: all var(--transition-fast);
+  margin-top: 2px;
+}
+
+.mk-selection-control:hover:not(.mk-selection-control--disabled) .mk-radio-circle {
+  border-color: var(--color-brand-primary);
+}
+
+.mk-selection-control input:focus-visible ~ .mk-radio-circle {
+  box-shadow: var(--focus-ring);
+  border-color: var(--color-border-focus);
+}
+
+.mk-selection-control input:checked ~ .mk-radio-circle {
+  border-color: var(--color-brand-primary);
+}
+
+.mk-radio-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--color-brand-primary);
+  opacity: 0;
+  transform: scale(0.5);
+  transition: all var(--transition-fast);
+}
+
+.mk-selection-control input:checked ~ .mk-radio-circle .mk-radio-dot {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Switch */
+.mk-switch-track {
+  width: 38px;
+  height: 22px;
+  border-radius: var(--radius-full);
+  background-color: var(--color-border-strong);
+  position: relative;
+  transition: background-color var(--transition-fast);
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.mk-switch-thumb {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: #FFFFFF;
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  transition: transform var(--transition-fast);
+  box-shadow: var(--shadow-low);
+}
+
+.mk-selection-control input:focus-visible ~ .mk-switch-track {
+  box-shadow: var(--focus-ring);
+}
+
+.mk-selection-control input:checked ~ .mk-switch-track {
+  background-color: var(--color-brand-primary);
+}
+
+.mk-selection-control input:checked ~ .mk-switch-track .mk-switch-thumb {
+  transform: translateX(16px);
+}
+
+.mk-selection-control__label-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.mk-selection-control__subtext {
+  font-size: var(--font-size-metadata);
+  color: var(--color-text-muted);
+}

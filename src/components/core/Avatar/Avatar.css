@@ -1,0 +1,42 @@
+/**
+ * Avatar Styles
+ */
+
+.mk-avatar {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-full);
+  background-color: var(--color-brand-subtle);
+  color: var(--color-brand-primary);
+  font-weight: var(--font-weight-semibold);
+  user-select: none;
+  overflow: hidden;
+  flex-shrink: 0;
+  border: var(--border-width-hairline) solid var(--color-border-subtle);
+}
+
+.mk-avatar--sm { width: 28px; height: 28px; font-size: 11px; }
+.mk-avatar--md { width: 36px; height: 36px; font-size: 13px; }
+.mk-avatar--lg { width: 48px; height: 48px; font-size: 16px; }
+
+.mk-avatar__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.mk-avatar__status {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 2px solid #FFFFFF;
+}
+
+.mk-avatar__status--online { background-color: var(--color-status-success); }
+.mk-avatar__status--busy { background-color: var(--color-status-error); }
+.mk-avatar__status--idle { background-color: var(--color-status-warning); }

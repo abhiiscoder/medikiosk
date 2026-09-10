@@ -1,0 +1,212 @@
+/**
+ * MEDiKIOSK — Phase 07: Document Collection Styles
+ * Clinical document collection container, dynamic counter badges, and empty states.
+ */
+
+.mk-doc-collection {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+}
+
+/* Collection Header */
+.mk-doc-collection__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding-bottom: 4px;
+}
+
+.mk-doc-collection__title-area {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.mk-doc-collection__title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #FFFFFF;
+  margin: 0;
+  letter-spacing: -0.01em;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.mk-doc-collection__count-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 8px;
+  border-radius: 12px;
+  background: rgba(24, 101, 242, 0.18);
+  border: 1px solid rgba(59, 130, 246, 0.3);
+  color: #60A5FA;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.mk-doc-collection__badges {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.mk-doc-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 3px 8px;
+  border-radius: 6px;
+  font-size: 11.5px;
+  font-weight: 500;
+}
+
+.mk-doc-pill--processed {
+  background: rgba(16, 185, 129, 0.12);
+  color: #34D399;
+  border: 1px solid rgba(16, 185, 129, 0.25);
+}
+
+.mk-doc-pill--progress {
+  background: rgba(56, 189, 248, 0.12);
+  color: #38BDF8;
+  border: 1px solid rgba(56, 189, 248, 0.25);
+}
+
+.mk-doc-pill--rejected {
+  background: rgba(245, 158, 11, 0.12);
+  color: #FBBF24;
+  border: 1px solid rgba(245, 158, 11, 0.25);
+}
+
+.mk-doc-pill--error {
+  background: rgba(239, 68, 68, 0.12);
+  color: #F87171;
+  border: 1px solid rgba(239, 68, 68, 0.25);
+}
+
+/* Upload More Button */
+.mk-doc-collection__upload-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 14px;
+  border-radius: 8px;
+  background: rgba(24, 101, 242, 0.14);
+  border: 1px solid rgba(59, 130, 246, 0.35);
+  color: #60A5FA;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.18s ease;
+}
+
+.mk-doc-collection__upload-btn:hover {
+  background: rgba(24, 101, 242, 0.26);
+  border-color: #60A5FA;
+  color: #FFFFFF;
+  transform: translateY(-1px);
+}
+
+/* Document Cards List */
+.mk-doc-collection__list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Bottom Actions Bar */
+.mk-doc-collection__bottom-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 0 4px 0;
+}
+
+.mk-doc-collection__upload-more-card {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px dashed rgba(255, 255, 255, 0.12);
+  color: var(--text-secondary, #94A3B8);
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.18s ease;
+  width: 100%;
+  justify-content: center;
+}
+
+.mk-doc-collection__upload-more-card:hover {
+  background: rgba(24, 101, 242, 0.08);
+  border-color: rgba(59, 130, 246, 0.35);
+  color: #60A5FA;
+}
+
+/* Mandatory Empty State */
+.mk-doc-collection-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 42px 24px;
+  border-radius: 12px;
+  background: rgba(14, 20, 32, 0.6);
+  border: 1px dashed rgba(255, 255, 255, 0.12);
+  gap: 12px;
+}
+
+.mk-doc-collection-empty-icon {
+  color: #64748B;
+  opacity: 0.8;
+  margin-bottom: 4px;
+}
+
+.mk-doc-collection-empty-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: #F1F5F9;
+  margin: 0;
+  line-height: 1.3;
+}
+
+.mk-doc-collection-empty-desc {
+  font-size: 13px;
+  color: #94A3B8;
+  margin: 0;
+  max-width: 380px;
+  line-height: 1.5;
+}
+
+.mk-doc-collection-empty-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 18px;
+  border-radius: 8px;
+  background: #1865F2;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #FFFFFF;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 6px;
+  box-shadow: 0 4px 14px rgba(24, 101, 242, 0.35);
+  transition: all 0.18s ease;
+}
+
+.mk-doc-collection-empty-btn:hover {
+  background: #2563EB;
+  box-shadow: 0 6px 18px rgba(24, 101, 242, 0.5);
+  transform: translateY(-1px);
+}

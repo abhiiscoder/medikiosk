@@ -1,0 +1,98 @@
+/**
+ * Clinical Status Badges Styles
+ */
+
+.mk-clinical-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 3px 8px;
+  border-radius: var(--radius-sm);
+  font-size: var(--font-size-metadata);
+  font-weight: var(--font-weight-medium);
+  border: var(--border-width-hairline) solid transparent;
+  line-height: 1.2;
+}
+
+/* Clinical Triage Priority */
+.mk-clinical-status--routine {
+  background-color: var(--color-bg-surface-muted);
+  color: var(--color-text-secondary);
+  border-color: var(--color-border-default);
+}
+
+.mk-clinical-status--urgent {
+  background-color: var(--color-status-warning-subtle);
+  color: var(--color-status-warning-text);
+  border-color: var(--color-status-warning-border);
+}
+
+.mk-clinical-status--emergency,
+.mk-clinical-status--stat {
+  background-color: var(--color-status-error-subtle);
+  color: var(--color-status-error-text);
+  border-color: var(--color-status-error-border);
+  font-weight: var(--font-weight-semibold);
+}
+
+/* Document Processing Status */
+.mk-doc-status--uploaded {
+  background-color: var(--color-bg-surface-muted);
+  color: var(--color-text-secondary);
+  border-color: var(--color-border-default);
+}
+
+.mk-doc-status--processing {
+  background-color: #F5F3FF;
+  color: #6D28D9;
+  border-color: #DDD6FE;
+}
+
+.mk-doc-status--ocr_complete {
+  background-color: var(--color-status-info-subtle);
+  color: var(--color-status-info-text);
+  border-color: var(--color-status-info-border);
+}
+
+.mk-doc-status--needs_review {
+  background-color: var(--color-status-warning-subtle);
+  color: var(--color-status-warning-text);
+  border-color: var(--color-status-warning-border);
+}
+
+.mk-doc-status--verified {
+  background-color: var(--color-status-success-subtle);
+  color: var(--color-status-success-text);
+  border-color: var(--color-status-success-border);
+}
+
+.mk-doc-status--failed {
+  background-color: var(--color-status-error-subtle);
+  color: var(--color-status-error-text);
+  border-color: var(--color-status-error-border);
+}
+
+/* Verification Status Levels */
+.mk-verification--unverified {
+  background-color: var(--color-bg-surface-muted);
+  color: var(--color-text-muted);
+  border-color: var(--color-border-default);
+}
+
+.mk-verification--ai_proposed {
+  background-color: var(--provenance-ai-bg);
+  color: var(--provenance-ai-text);
+  border-color: var(--provenance-ai-border);
+}
+
+.mk-verification--clinician_reviewed {
+  background-color: var(--color-status-info-subtle);
+  color: var(--color-status-info-text);
+  border-color: var(--color-status-info-border);
+}
+
+.mk-verification--verified {
+  background-color: var(--provenance-verified-bg);
+  color: var(--provenance-verified-text);
+  border-color: var(--provenance-verified-border);
+}

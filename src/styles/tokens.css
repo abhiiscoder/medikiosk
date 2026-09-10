@@ -1,0 +1,209 @@
+/**
+ * MEDiKIOSK — PHASE 00
+ * Design System Tokens (Single Source of Truth)
+ * Visual Direction: Clinical, Trustworthy, Calm, Intelligent, Modern, Precise, Professional
+ */
+
+:root {
+  /* -------------------------------------------------------------
+     1. COLOR SYSTEM (Semantic Roles)
+     ------------------------------------------------------------- */
+  /* Backgrounds */
+  --color-bg-app: #F8FAFC;
+  --color-bg-surface: #FFFFFF;
+  --color-bg-surface-elevated: #FFFFFF;
+  --color-bg-surface-muted: #F1F5F9;
+  --color-bg-surface-active: #E2E8F0;
+  --color-bg-overlay: rgba(15, 23, 42, 0.5);
+
+  /* Typography Colors */
+  --color-text-primary: #0F172A;     /* Slate 900 - readable, high contrast */
+  --color-text-secondary: #334155;   /* Slate 700 - clinical content, body text */
+  --color-text-muted: #64748B;       /* Slate 500 - labels, metadata */
+  --color-text-disabled: #94A3B8;    /* Slate 400 - disabled controls */
+  --color-text-inverse: #FFFFFF;     /* White on dark backgrounds */
+  --color-text-brand: #0E47C2;       /* Clinical brand accent text */
+
+  /* Borders */
+  --color-border-default: #E2E8F0;   /* Slate 200 - standard card & row dividers */
+  --color-border-subtle: #F1F5F9;    /* Slate 100 - inner component boundaries */
+  --color-border-strong: #CBD5E1;    /* Slate 300 - active input & emphasized containers */
+  --color-border-focus: #2563EB;     /* Blue 600 - accessible keyboard focus */
+
+  /* Brand Colors (Restrained Clinical Blue) */
+  --color-brand-primary: #0E47C2;
+  --color-brand-hover: #0B3A9E;
+  --color-brand-active: #092C78;
+  --color-brand-subtle: #EFF6FF;
+  --color-brand-border: #BFDBFE;
+  --color-brand-contrast: #FFFFFF;
+
+  /* Status Colors */
+  --color-status-success: #059669;
+  --color-status-success-subtle: #ECFDF5;
+  --color-status-success-border: #A7F3D0;
+  --color-status-success-text: #065F46;
+
+  --color-status-warning: #D97706;
+  --color-status-warning-subtle: #FFFBEB;
+  --color-status-warning-border: #FDE68A;
+  --color-status-warning-text: #92400E;
+
+  --color-status-error: #DC2626;
+  --color-status-error-subtle: #FEF2F2;
+  --color-status-error-border: #FECACA;
+  --color-status-error-text: #991B1B;
+
+  --color-status-info: #0284C7;
+  --color-status-info-subtle: #F0F9FF;
+  --color-status-info-border: #BAE6FD;
+  --color-status-info-text: #075985;
+
+  /* -------------------------------------------------------------
+     2. CLINICAL INFORMATION HIERARCHY & PROVENANCE TOKENS
+     (Crucial distinction between User, AI, Document, and Clinician data)
+     ------------------------------------------------------------- */
+  /* User-Provided (Patient Statement / Input) */
+  --provenance-user-bg: #EFF6FF;
+  --provenance-user-border: #BFDBFE;
+  --provenance-user-text: #1D4ED8;
+  --provenance-user-tag: #DBEAFE;
+
+  /* AI-Extracted (Clinical Entity / Structured Extraction) */
+  --provenance-ai-bg: #F5F3FF;
+  --provenance-ai-border: #DDD6FE;
+  --provenance-ai-text: #6D28D9;
+  --provenance-ai-tag: #EDE9FE;
+
+  /* Document-Derived (OCR / Laboratory / Radiology Extraction) */
+  --provenance-doc-bg: #F0FDFA;
+  --provenance-doc-border: #99F6E4;
+  --provenance-doc-text: #0F766E;
+  --provenance-doc-tag: #CCFBF1;
+
+  /* Clinician-Reviewed (Doctor Confirmed / Signed Off) */
+  --provenance-verified-bg: #F0FDF4;
+  --provenance-verified-border: #BBF7D0;
+  --provenance-verified-text: #15803D;
+  --provenance-verified-tag: #DCFCE7;
+
+  /* System / Technical Telemetry */
+  --provenance-sys-bg: #F8FAFC;
+  --provenance-sys-border: #E2E8F0;
+  --provenance-sys-text: #475569;
+  --provenance-sys-tag: #F1F5F9;
+
+  /* -------------------------------------------------------------
+     3. TYPOGRAPHY SYSTEM (Inter Primary Font)
+     ------------------------------------------------------------- */
+  --font-family-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  --font-family-mono: 'JetBrains Mono', 'SFMono-Regular', Consolas, Menlo, monospace;
+
+  /* Font Sizes */
+  --font-size-display: 1.875rem;     /* 30px - Reserved for landing / demo header */
+  --font-size-title-app: 1.375rem;    /* 22px - Application workspace title */
+  --font-size-title-page: 1.1875rem;  /* 19px - Section / Page heading */
+  --font-size-heading-section: 1.0625rem; /* 17px - Card / group title */
+  --font-size-heading-subsection: 0.9375rem; /* 15px - Subgroup / fieldset title */
+  --font-size-body: 0.875rem;         /* 14px - Primary clinical reading density */
+  --font-size-body-small: 0.8125rem;  /* 13px - Compact lists & secondary data */
+  --font-size-metadata: 0.75rem;      /* 12px - Timestamps, ID codes, source badges */
+  --font-size-caption: 0.6875rem;     /* 11px - Micro indicators, footnote tags */
+
+  /* Line Heights */
+  --line-height-tight: 1.25;
+  --line-height-snug: 1.375;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.625;
+
+  /* Font Weights */
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  /* -------------------------------------------------------------
+     4. SPACING SYSTEM (4px Incremental Grid)
+     ------------------------------------------------------------- */
+  --space-0: 0px;
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+
+  /* -------------------------------------------------------------
+     5. BORDER & RADIUS SYSTEM (Restrained, Non-Bubbly)
+     ------------------------------------------------------------- */
+  --radius-none: 0px;
+  --radius-sm: 4px;     /* Small controls, status tags, table cells */
+  --radius-md: 6px;     /* Buttons, form inputs, badge containers */
+  --radius-lg: 10px;    /* Cards, panels, interactive containers */
+  --radius-xl: 14px;    /* Modals, drawers, major workspace shells */
+  --radius-full: 9999px;/* Pill tags, circular avatars, status dots */
+
+  --border-width-hairline: 1px;
+  --border-width-medium: 1.5px;
+  --border-width-focus: 2px;
+
+  /* -------------------------------------------------------------
+     6. ELEVATION / SHADOWS (Restrained Surface + Border Architecture)
+     ------------------------------------------------------------- */
+  --shadow-flat: none;
+  --shadow-low: 0 1px 2px 0 rgba(15, 23, 42, 0.04);
+  --shadow-md: 0 3px 6px -1px rgba(15, 23, 42, 0.06), 0 2px 4px -2px rgba(15, 23, 42, 0.03);
+  --shadow-high: 0 10px 15px -3px rgba(15, 23, 42, 0.07), 0 4px 6px -4px rgba(15, 23, 42, 0.02);
+  --shadow-modal: 0 20px 25px -5px rgba(15, 23, 42, 0.10), 0 8px 10px -6px rgba(15, 23, 42, 0.05);
+
+  /* -------------------------------------------------------------
+     7. ACCESSIBILITY & FOCUS
+     ------------------------------------------------------------- */
+  --focus-ring: 0 0 0 2px var(--color-bg-surface), 0 0 0 4px var(--color-border-focus);
+  --focus-ring-inset: inset 0 0 0 2px var(--color-border-focus);
+
+  /* -------------------------------------------------------------
+     8. MOTION SYSTEM (Calm, Functional, Non-Distracting)
+     ------------------------------------------------------------- */
+  --ease-standard: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-in: cubic-bezier(0.4, 0, 1, 1);
+  --ease-out: cubic-bezier(0, 0, 0.2, 1);
+
+  --duration-instant: 100ms;
+  --duration-fast: 150ms;
+  --duration-normal: 220ms;
+  --duration-slow: 320ms;
+
+  --transition-fast: var(--duration-fast) var(--ease-standard);
+  --transition-normal: var(--duration-normal) var(--ease-standard);
+  --transition-slow: var(--duration-slow) var(--ease-standard);
+
+  /* -------------------------------------------------------------
+     9. RESPONSIVE BREAKPOINTS (For Reference & Documentation)
+     ------------------------------------------------------------- */
+  --bp-sm: 640px;
+  --bp-md: 768px;
+  --bp-lg: 1024px;
+  --bp-xl: 1280px;
+  --bp-2xl: 1536px;
+
+  /* Layout dimensions */
+  --sidebar-width-expanded: 260px;
+  --sidebar-width-collapsed: 64px;
+  --topbar-height: 56px;
+  --max-content-width: 1440px;
+}
+
+/* Reduced motion preference support */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

@@ -1,0 +1,83 @@
+/**
+ * ClinicalTimeline Styles
+ */
+
+.mk-timeline {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding-left: var(--space-6);
+}
+
+.mk-timeline::before {
+  content: '';
+  position: absolute;
+  top: 8px;
+  bottom: 8px;
+  left: 11px;
+  width: 2px;
+  background-color: var(--color-border-default);
+}
+
+.mk-timeline-item {
+  position: relative;
+  margin-bottom: var(--space-5);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.mk-timeline-item:last-child {
+  margin-bottom: 0;
+}
+
+.mk-timeline-marker {
+  position: absolute;
+  left: -29px;
+  top: 2px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: var(--color-bg-surface);
+  border: 2px solid var(--color-brand-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-brand-primary);
+  box-shadow: var(--shadow-low);
+  z-index: 1;
+}
+
+.mk-timeline-content {
+  background-color: var(--color-bg-surface);
+  border: var(--border-width-hairline) solid var(--color-border-default);
+  border-radius: var(--radius-md);
+  padding: var(--space-3) var(--space-4);
+  box-shadow: var(--shadow-low);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.mk-timeline-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2);
+}
+
+.mk-timeline-title {
+  font-size: var(--font-size-body);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-primary);
+}
+
+.mk-timeline-desc {
+  font-size: var(--font-size-body-small);
+  color: var(--color-text-secondary);
+}
+
+.mk-timeline-time {
+  font-size: var(--font-size-metadata);
+  color: var(--color-text-muted);
+}

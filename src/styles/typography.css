@@ -1,0 +1,102 @@
+/**
+ * MEDiKIOSK — PHASE 00
+ * Typography Hierarchy & Utilities (Inter Type Scale)
+ */
+
+.text-display {
+  font-size: var(--font-size-display);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-tight);
+  letter-spacing: -0.025em;
+  color: var(--color-text-primary);
+}
+
+.text-title-app {
+  font-size: var(--font-size-title-app);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-tight);
+  letter-spacing: -0.02em;
+  color: var(--color-text-primary);
+}
+
+.text-title-page {
+  font-size: var(--font-size-title-page);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-snug);
+  letter-spacing: -0.015em;
+  color: var(--color-text-primary);
+}
+
+.text-heading-section {
+  font-size: var(--font-size-heading-section);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-snug);
+  letter-spacing: -0.01em;
+  color: var(--color-text-primary);
+}
+
+.text-heading-subsection {
+  font-size: var(--font-size-heading-subsection);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-snug);
+  color: var(--color-text-primary);
+}
+
+.text-body {
+  font-size: var(--font-size-body);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-normal);
+  color: var(--color-text-secondary);
+}
+
+.text-body-small {
+  font-size: var(--font-size-body-small);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-normal);
+  color: var(--color-text-secondary);
+}
+
+.text-metadata {
+  font-size: var(--font-size-metadata);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-tight);
+  color: var(--color-text-muted);
+}
+
+.text-caption {
+  font-size: var(--font-size-caption);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-tight);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--color-text-muted);
+}
+
+.text-label {
+  font-size: var(--font-size-body-small);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-tight);
+  color: var(--color-text-secondary);
+  display: inline-block;
+  margin-bottom: var(--space-1);
+}
+
+.text-mono {
+  font-family: var(--font-family-mono);
+}
+
+/* Weight Modifiers */
+.font-regular { font-weight: var(--font-weight-regular); }
+.font-medium { font-weight: var(--font-weight-medium); }
+.font-semibold { font-weight: var(--font-weight-semibold); }
+.font-bold { font-weight: var(--font-weight-bold); }
+
+/* Color Modifiers */
+.text-color-primary { color: var(--color-text-primary); }
+.text-color-secondary { color: var(--color-text-secondary); }
+.text-color-muted { color: var(--color-text-muted); }
+.text-color-brand { color: var(--color-brand-primary); }
+.text-color-success { color: var(--color-status-success-text); }
+.text-color-warning { color: var(--color-status-warning-text); }
+.text-color-error { color: var(--color-status-error-text); }
+.text-color-info { color: var(--color-status-info-text); }

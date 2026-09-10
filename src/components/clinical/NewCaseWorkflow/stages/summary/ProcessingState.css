@@ -1,0 +1,459 @@
+/**
+ * MEDiKIOSK — PHASE 09
+ * Processing State Stylesheet
+ *
+ * Implements the restrained, high-clarity clinical processing timeline.
+ * Matches visual reference media_1788895806378.png.
+ */
+
+.mk-p09-processing-root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  max-width: 520px;
+  margin: 0 auto;
+  padding: 8px 12px 10px 12px;
+  animation: mk-p09-appear 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  user-select: none;
+}
+
+@keyframes mk-p09-appear {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 1. Acoustic Resonance Waves Graphic */
+.mk-p09-resonance-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.mk-p09-resonance-waves {
+  display: block;
+  overflow: visible;
+}
+
+.mk-p09-resonance-waves path {
+  animation: mk-p09-wave-pulse 2.2s ease-in-out infinite;
+}
+
+.mk-p09-resonance-waves--right path {
+  animation-delay: 0.3s;
+}
+
+@keyframes mk-p09-wave-pulse {
+  0%, 100% {
+    opacity: 0.25;
+  }
+  50% {
+    opacity: 0.95;
+    filter: drop-shadow(0 0 4px rgba(56, 189, 248, 0.6));
+  }
+}
+
+.mk-p09-resonance-icon-box {
+  width: 52px;
+  height: 52px;
+  border-radius: 12px;
+  background-color: rgba(14, 30, 60, 0.85);
+  border: 1.5px solid rgba(56, 189, 248, 0.5);
+  box-shadow: 0 0 20px rgba(24, 101, 242, 0.35), inset 0 0 12px rgba(56, 189, 248, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #38BDF8;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.mk-p09-resonance-icon {
+  filter: drop-shadow(0 0 6px rgba(56, 189, 248, 0.4));
+}
+
+/* 2. Headings */
+.mk-p09-heading {
+  font-size: 19px;
+  font-weight: 700;
+  letter-spacing: -0.015em;
+  color: #FFFFFF;
+  margin: 0 0 3px 0;
+  line-height: 1.25;
+}
+
+.mk-p09-subheading {
+  font-size: 12.5px;
+  color: #94A3B8;
+  margin: 0 0 18px 0;
+  font-weight: 400;
+  line-height: 1.35;
+}
+
+/* 3. State-Driven Vertical Processing Timeline */
+.mk-p09-timeline-list {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 420px;
+  margin: 0 auto;
+  gap: 0;
+}
+
+.mk-p09-timeline-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  position: relative;
+  text-align: left;
+}
+
+/* Left Gutter: Marker & Connector */
+.mk-p09-timeline-gutter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 22px;
+  flex-shrink: 0;
+  position: relative;
+  padding-top: 1px;
+}
+
+/* Node Markers */
+.mk-p09-node-marker {
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  position: relative;
+  z-index: 2;
+  transition: all 0.25s ease;
+}
+
+/* Completed Node */
+.mk-p09-node-check {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background-color: #10B981;
+  color: #0F172A;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 10px rgba(16, 185, 129, 0.4);
+  animation: mk-p09-pop 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+@keyframes mk-p09-pop {
+  0% { transform: scale(0.6); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+/* Active Node: Glowing outer ring + inner solid dot */
+.mk-p09-node-active {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid #38BDF8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background-color: rgba(14, 30, 60, 0.7);
+  box-shadow: 0 0 14px rgba(56, 189, 248, 0.45);
+}
+
+.mk-p09-node-active__dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #38BDF8;
+  box-shadow: 0 0 8px #38BDF8;
+}
+
+.mk-p09-node-active__pulse {
+  position: absolute;
+  inset: -3px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(56, 189, 248, 0.5);
+  animation: mk-p09-ring-pulse 1.8s ease-in-out infinite;
+}
+
+@keyframes mk-p09-ring-pulse {
+  0%, 100% {
+    opacity: 0.3;
+    transform: scale(0.92);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.18);
+  }
+}
+
+/* Pending Node */
+.mk-p09-node-pending {
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mk-p09-node-pending__ring {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(71, 85, 105, 0.45);
+  background: transparent;
+}
+
+/* Error Node */
+.mk-p09-node-error {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background-color: #EF4444;
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 10px rgba(239, 68, 68, 0.5);
+}
+
+/* Connector Line */
+.mk-p09-node-connector {
+  width: 2px;
+  position: absolute;
+  top: 22px;
+  bottom: -2px;
+  background-color: rgba(51, 65, 85, 0.35);
+  z-index: 1;
+  transition: background-color 0.3s ease;
+}
+
+.mk-p09-node-connector--completed {
+  background: linear-gradient(180deg, #10B981 0%, #38BDF8 100%);
+}
+
+.mk-p09-node-connector--active {
+  background: linear-gradient(180deg, rgba(56, 189, 248, 0.7) 0%, rgba(51, 65, 85, 0.35) 100%);
+}
+
+.mk-p09-node-connector--error {
+  background-color: rgba(239, 68, 68, 0.6);
+}
+
+/* Right Text Column */
+.mk-p09-timeline-text {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  padding-top: 1px;
+  padding-bottom: 11px;
+  min-width: 0;
+}
+
+.mk-p09-timeline-label {
+  font-size: 13px;
+  font-weight: 500;
+  color: #64748B;
+  line-height: 1.3;
+  transition: color 0.25s ease, font-weight 0.25s ease;
+}
+
+.mk-p09-timeline-item--completed .mk-p09-timeline-label {
+  color: #E2E8F0;
+  font-weight: 500;
+}
+
+.mk-p09-timeline-item--active .mk-p09-timeline-label {
+  color: #38BDF8;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.mk-p09-timeline-item--pending .mk-p09-timeline-label {
+  color: #64748B;
+}
+
+.mk-p09-timeline-item--error .mk-p09-timeline-label {
+  color: #F87171;
+  font-weight: 600;
+}
+
+.mk-p09-timeline-desc {
+  font-size: 11px;
+  color: #64748B;
+  line-height: 1.35;
+  font-weight: 400;
+}
+
+.mk-p09-timeline-item--completed .mk-p09-timeline-desc {
+  color: #94A3B8;
+}
+
+.mk-p09-timeline-item--active .mk-p09-timeline-desc {
+  color: #CBD5E1;
+}
+
+.mk-p09-timeline-item--pending .mk-p09-timeline-desc {
+  color: rgba(100, 116, 139, 0.6);
+}
+
+.mk-p09-timeline-item--error .mk-p09-timeline-desc {
+  color: #FCA5A5;
+}
+
+/* 4. Bottom Info Pill */
+.mk-p09-info-pill {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  background-color: rgba(15, 23, 42, 0.65);
+  border: 1px solid rgba(56, 189, 248, 0.16);
+  border-radius: 10px;
+  max-width: 440px;
+  width: 100%;
+  margin: 10px auto 0 auto;
+  color: #94A3B8;
+  font-size: 11.5px;
+  font-weight: 400;
+  line-height: 1.35;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.mk-p09-info-icon {
+  color: #38BDF8;
+  flex-shrink: 0;
+}
+
+/* 5. Error Recovery Banner */
+.mk-p09-error-banner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 16px;
+  background-color: rgba(239, 68, 68, 0.08);
+  border: 1px solid rgba(239, 68, 68, 0.28);
+  border-radius: 10px;
+  max-width: 440px;
+  width: 100%;
+  margin: 10px auto 0 auto;
+  text-align: left;
+}
+
+.mk-p09-error-banner__header {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  width: 100%;
+}
+
+.mk-p09-error-icon-box {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  background-color: rgba(239, 68, 68, 0.15);
+  color: #F87171;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.mk-p09-error-text-box {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.mk-p09-error-title {
+  font-size: 13.5px;
+  font-weight: 600;
+  color: #FCA5A5;
+  margin: 0;
+}
+
+.mk-p09-error-desc {
+  font-size: 11.5px;
+  color: #94A3B8;
+  margin: 0;
+  line-height: 1.35;
+}
+
+.mk-p09-error-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+  gap: 8px;
+}
+
+.mk-p09-retry-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  background: linear-gradient(135deg, #1865F2 0%, #0284C7 100%);
+  border: none;
+  border-radius: 6px;
+  color: #FFFFFF;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(24, 101, 242, 0.35);
+  transition: all 0.15s ease;
+}
+
+.mk-p09-retry-button:hover {
+  background: linear-gradient(135deg, #1D4ED8 0%, #0369A1 100%);
+  transform: translateY(-1px);
+}
+
+.mk-p09-retry-button:active {
+  transform: translateY(0);
+}
+
+/* Light Theme Overrides */
+[data-theme='light'] .mk-p09-resonance-icon-box {
+  background-color: rgba(24, 101, 242, 0.08);
+  border-color: rgba(24, 101, 242, 0.3);
+  color: #1865F2;
+}
+
+[data-theme='light'] .mk-p09-heading {
+  color: #0F172A;
+}
+
+[data-theme='light'] .mk-p09-subheading {
+  color: #64748B;
+}
+
+[data-theme='light'] .mk-p09-timeline-item--completed .mk-p09-timeline-label {
+  color: #0F172A;
+}
+
+[data-theme='light'] .mk-p09-timeline-item--active .mk-p09-timeline-label {
+  color: #1865F2;
+}
+
+[data-theme='light'] .mk-p09-info-pill {
+  background-color: #F8FAFC;
+  border-color: rgba(24, 101, 242, 0.2);
+  color: #475569;
+}
